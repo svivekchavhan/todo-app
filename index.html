@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Todo App</title>
+</head>
+
+<body class="bg-gray-200 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-md w-auto ">
+        <h1 class="text-2xl font-bold mb-4">Todo App</h1>
+
+        <div class="flex mt-4 relative  ">
+            <input type="text" id="newTask" class=" p-2 border rounded mr-2" placeholder="New Task">
+            <button id="showNotification" onclick="addTask()" class=" px-6 bg-blue-500 text-white rounded">Add</button>
+            <button onclick="printTasks()" class=" px-6 bg-green-500 text-white rounded ml-1">Print</button>
+        </div>
+        <div id="todoList" class="space-y-4 bg mt-2">
+            <!-- Todo items will be added here dynamically -->
+        </div>
+    </div>
+
+    <!-- toast notifiacation -->
+    <div id="toast" class="toast bg-green-500 text-white p-3 rounded-md fixed top-5 right-5 ease-in-out duration-150 ">
+        <!-- Toast content will be dynamically inserted here -->
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
